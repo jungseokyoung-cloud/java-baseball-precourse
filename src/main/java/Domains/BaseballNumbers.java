@@ -1,6 +1,7 @@
 package Domains;
 
 import java.util.List;
+import java.util.Collections;
 
 public class BaseballNumbers {
     private final List<Integer> numbers;
@@ -21,6 +22,10 @@ public class BaseballNumbers {
             }
         }
         return new GameResult(strikes, balls);
+    }
+
+    public List<Integer> getNumbers() {
+        return Collections.unmodifiableList(numbers);
     }
 
     private boolean isStrike(int index, List<Integer> otherNumbers) {
