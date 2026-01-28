@@ -1,4 +1,4 @@
-package domains; // 컨벤션에 따라 소문자로 변경 제안
+package domains;
 
 import static org.assertj.core.api.Assertions.*;
 
