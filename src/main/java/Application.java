@@ -1,0 +1,14 @@
+import Controllers.GameController;
+import Views.InputView;
+import Views.OutputView;
+
+public class Application {
+    public static void main(String[] args) {
+        InputView inputView = new InputView();
+        OutputView outputView = new OutputView();
+
+        GameController controller = new GameController(inputView, outputView);
+
+        controller.run();
+    }
+}
