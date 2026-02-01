@@ -43,8 +43,7 @@ public class GameController {
 
                 isGameWon = result.isThreeStrike();
             } catch (IllegalArgumentException e) {
-                // 에러 발생 시 [ERROR] 메시지 출력 후 반복문 계속 진행
-                System.out.println("[ERROR] " + e.getMessage());
+                outputView.printErrorMessage(e.getMessage());
             }
         }
         outputView.printGameEnd();
