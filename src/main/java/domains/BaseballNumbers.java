@@ -17,7 +17,11 @@ public class BaseballNumbers {
         for (int i = 0; i < numbers.size(); i++) {
             if (isStrike(i, otherNumbers)) {
                 strikes++;
-            } else if (isBall(i, otherNumbers)) {
+            }
+        }
+
+        for (int i = 0; i < numbers.size(); i++) {
+            if (isBall(i, otherNumbers)) {
                 balls++;
             }
         }
