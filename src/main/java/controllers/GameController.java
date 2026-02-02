@@ -32,21 +32,22 @@ public class GameController {
         boolean isGameWon = false;
         // 2. 맞출 때까지 반복
         while (!isGameWon) {
-            try {
-                String input = inputView.readNumbers();
-                Validator.validateInput(input); // 유효성 검사 (실패 시 예외 발생)
-
-                List<Integer> playerNumbers = parseInput(input);
-
-                GameResult result = computerNumbers.compare(playerNumbers);
-                outputView.printResult(result);
-
-                isGameWon = result.isThreeStrike();
-            } catch (IllegalArgumentException e) {
-                outputView.printErrorMessage(e.getMessage());
-            }
+            isGameWon = playTurn(computerNumbers); // 루프 내부 로직 분리 (15라인 제한 준수)
         }
         outputView.printGameEnd();
+    }
+
+    private boolean playTurn(BaseballNumbers computerNumbers) {
+        try {
+            String input = inputView.readNumbers();
+            Validator.validateInput(input);
+            GameResult result = computerNumbers.compare(parseInput(input));
+            outputView.printResult(result);
+            return result.isThreeStrike();
+        } catch (IllegalArgumentException e) {
+            outputView.printErrorMessage(e.getMessage()); // UI 일관성 유지
+            return false;
+        }
     }
 
     private boolean isRestartRequested() {
