@@ -1,5 +1,8 @@
 package domains;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Validator {
     public static void validateRestartCommand(String input) {
         if (!input.equals("1") && !input.equals("2")) {
@@ -24,6 +27,10 @@ public class Validator {
     }
 
     private static boolean hasDuplicate(String str) {
-        return str.chars().distinct().count() != str.length();
+        Set<Character> uniqueChars = new HashSet<>();
+        for (char c : str.toCharArray()) {
+            uniqueChars.add(c);
+        }
+        return uniqueChars.size() != str.length();
     }
 }
