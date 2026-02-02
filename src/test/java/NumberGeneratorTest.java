@@ -5,8 +5,6 @@ import static org.assertj.core.api.Assertions.*;
 import java.util.List;
 import java.util.Set;
 
-import Domains.BaseballNumbers;
-import Domains.NumberGenerator;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;

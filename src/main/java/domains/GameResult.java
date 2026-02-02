@@ -1,4 +1,4 @@
-package Domains;
+package domains;
 
 public class GameResult {
     private final int strikes;

@@ -1,6 +1,6 @@
-package Views;
+package views;
 
-import Domains.GameResult;
+import domains.GameResult;
 
 public class OutputView {
     private static final String BALL = "볼";

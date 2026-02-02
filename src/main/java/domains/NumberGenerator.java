@@ -1,4 +1,4 @@
-package Domains;
+package domains;
 
 import java.util.ArrayList;
 import java.util.LinkedHashSet;

@@ -1,11 +1,11 @@
-package Controllers;
+package controllers;
 
-import Domains.BaseballNumbers;
-import Domains.GameResult;
-import Domains.NumberGenerator;
-import Domains.Validator;
-import Views.InputView;
-import Views.OutputView;
+import domains.BaseballNumbers;
+import domains.GameResult;
+import domains.NumberGenerator;
+import domains.Validator;
+import views.InputView;
+import views.OutputView;
 
 import java.util.ArrayList;
 import java.util.List;

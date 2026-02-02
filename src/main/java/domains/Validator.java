@@ -1,4 +1,4 @@
-package Domains;
+package domains;
 
 public class Validator {
     public static void validateRestartCommand(String input) {
